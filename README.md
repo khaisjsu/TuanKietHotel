@@ -1,6 +1,6 @@
 # Tuan Kiet Retreat
 
-A family-run hotel booking website for Tuan Kiet Retreat in Da Lat, Vietnam,
+A family-run hotel booking website for Tuan Kiet Hotel in Gia Lai province, Vietnam,
 built on [vinext](https://github.com/cloudflare/vinext) with Cloudflare D1 and
 Drizzle for booking storage.
 
