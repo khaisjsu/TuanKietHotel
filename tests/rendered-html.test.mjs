@@ -36,7 +36,7 @@ test("deployment metadata and database migration are present", async () => {
   const layout = await read("app/layout.tsx");
   const host = await read(".openai/hosting.json");
   const migration = await read("drizzle/0001_low_blue_blade.sql");
-  assert.match(layout, /Tuan Kiet Retreat \| A quieter stay in Da Lat/);
+  assert.match(layout, /Tuan Kiet Retreat \| A quieter stay in Quy Nhon/);
   assert.match(host, /"d1":\s*"DB"/);
   assert.match(migration, /CREATE INDEX/);
 });

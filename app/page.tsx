@@ -30,7 +30,7 @@ const rooms = [
 const amenities = [
   ["01", "Breakfast, slowly", "Seasonal Vietnamese breakfast, local coffee, and warm bread served until 11."],
   ["02", "Restorative rituals", "Herbal baths, in-room massage, and quiet corners designed for doing very little."],
-  ["03", "Made for Da Lat", "Curated walks, private drivers, and local recommendations beyond the usual guidebook."],
+    ["03", "Made for Quy Nhon", "Curated coastal excursions, private drivers, and local recommendations beyond the usual guidebook."],
   ["04", "Thoughtful by nature", "Refillable amenities, local materials, and produce sourced from nearby farms."],
   ["05", "Family friendly", "Cribs, connecting rooms, board games, and a garden safe enough to run in."],
   ["06", "Free Wi‑Fi & parking", "Fast Wi‑Fi throughout, on-site parking, and 24-hour front desk support."],
@@ -110,7 +110,7 @@ export default async function Home({
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Tuan Kiet Retreat home">
           <span>Tuan Kiet</span>
-          <small>Retreat · Da Lat</small>
+          <small>Retreat · Quy Nhon</small>
         </a>
         <nav aria-label="Primary navigation">
           <a href="#stay">Stay</a>
@@ -125,7 +125,7 @@ export default async function Home({
       <section className="hero" id="top" aria-labelledby="hero-heading">
         <div className="hero-shade" />
         <div className="hero-copy">
-          <p className="eyebrow light">A private retreat in Da Lat, Vietnam</p>
+          <p className="eyebrow light">A private retreat in Quy Nhon, Vietnam</p>
           <h1 id="hero-heading">A quieter way<br />to stay.</h1>
           <p className="hero-intro">
             Slow mornings, pine-scented air, and rooms made for unhurried days — for couples,
@@ -133,7 +133,7 @@ export default async function Home({
           </p>
         </div>
         <div className="hero-note" aria-hidden="true">
-          <span>11.9404° N</span><span>108.4583° E</span>
+          <span>13.7820° N</span><span>109.2197° E</span>
         </div>
         <a className="scroll-cue" href="#book-form">Discover the retreat <span>↓</span></a>
       </section>
@@ -173,7 +173,7 @@ export default async function Home({
         </div>
         <div className="welcome-copy">
           <p>
-            Tuan Kiet is a small, family-run retreat tucked into the pine hills of Da Lat—a
+            Tuan Kiet is a small, family-run retreat in Quy Nhon, Gia Lai—a
             place where considered design, local hospitality, and the landscape live in easy
             balance.
           </p>
@@ -217,9 +217,9 @@ export default async function Home({
       </section>
 
       <section className="experience" id="experience">
-        <div className="experience-image" role="img" aria-label="Mist moving through Da Lat pine forest" />
+        <div className="experience-image" role="img" aria-label="Sunlight over the Quy Nhon landscape" />
         <div className="experience-copy">
-          <p className="eyebrow light">The Da Lat rhythm</p>
+          <p className="eyebrow light">The Quy Nhon rhythm</p>
           <h2>Let the day<br />unfold slowly.</h2>
           <p>
             Start with coffee in the garden. Follow a pine trail before lunch. Return for a
@@ -314,8 +314,8 @@ export default async function Home({
       <section className="location" id="contact" aria-labelledby="location-heading">
         <div className="location-copy">
           <p className="eyebrow">Find us</p>
-          <h2 id="location-heading">Come see us in Da Lat.</h2>
-          <p>Ward 4, Da Lat, Lam Dong, Vietnam — 15 minutes from the city center.</p>
+          <h2 id="location-heading">Come see us in Quy Nhon.</h2>
+          <p>Quốc lộ 19C/Lô 18-19 Đường số 7, khu Nhà phố Đại Phú Gia, Quy Nhơn Đông, Gia Lai 70000, Vietnam.</p>
           <div className="location-contact">
             <a href="mailto:stay@tuankietretreat.com">stay@tuankietretreat.com</a>
             <a href="tel:+842633555888">+84 263 355 5888</a>
@@ -324,8 +324,8 @@ export default async function Home({
         </div>
         <div className="location-map">
           <iframe
-            title="Map showing Tuan Kiet Retreat in Da Lat, Vietnam"
-            src="https://maps.google.com/maps?q=Da+Lat,+Lam+Dong,+Vietnam&output=embed"
+            title="Map showing Tuan Kiet Retreat in Quy Nhon, Gia Lai, Vietnam"
+            src="https://maps.google.com/maps?q=Quoc+lo+19C%2FL%C3%B4+18-19+%C4%90%C6%B0%E1%BB%9Dng+s%E1%BB%91+7%2C+khu+Nh%C3%A0+ph%E1%BB%91+%C4%90%E1%BA%A1i+Ph%C3%BA+Gia%2C+Quy+Nh%C6%A1n+%C4%90%C3%B4ng%2C+Gia+Lai+70000%2C+Vietnam&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
@@ -343,11 +343,11 @@ export default async function Home({
       <footer>
         <div className="footer-brand">
           <span>Tuan Kiet</span>
-          <p>A small, family-run retreat in the pine hills of Da Lat, Vietnam.</p>
+          <p>A small, family-run retreat in Quy Nhon, Gia Lai, Vietnam.</p>
         </div>
         <div>
           <p className="footer-label">Find us</p>
-          <p>Ward 4, Da Lat<br />Lam Dong, Vietnam</p>
+          <p>Quốc lộ 19C/Lô 18-19 Đường số 7<br />khu Nhà phố Đại Phú Gia, Quy Nhơn Đông<br />Gia Lai 70000, Vietnam</p>
         </div>
         <div>
           <p className="footer-label">Contact</p>
