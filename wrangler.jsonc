@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tuankiethotel",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tuankiet-hotel-db",
+      "database_id": "5b197614-b71b-483a-b15a-ac9da5ea59be",
+      "migrations_dir": "drizzle"
+    }
+  ]
+}

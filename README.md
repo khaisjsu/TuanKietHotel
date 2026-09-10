@@ -107,6 +107,7 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - `npm run build`: verify the vinext build output
 - `npm test`: build the site and run product-level source checks
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+- `npm run db:migrate:remote`: apply generated migrations to the configured remote D1 database
 
 ## Learn More
 

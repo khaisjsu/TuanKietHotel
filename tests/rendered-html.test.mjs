@@ -35,9 +35,11 @@ test("private family dashboard uses platform authentication", async () => {
 test("deployment metadata and database migration are present", async () => {
   const layout = await read("app/layout.tsx");
   const host = await read(".openai/hosting.json");
+  const wrangler = await read("wrangler.jsonc");
   const migration = await read("drizzle/0001_low_blue_blade.sql");
   assert.match(layout, /Tuan Kiet Retreat \| A quieter stay in Quy Nhon/);
   assert.match(host, /"d1":\s*"DB"/);
   assert.match(host, /"d1_database_id":\s*"5b197614-b71b-483a-b15a-ac9da5ea59be"/);
+  assert.match(wrangler, /"database_id":\s*"5b197614-b71b-483a-b15a-ac9da5ea59be"/);
   assert.match(migration, /CREATE INDEX/);
 });
