@@ -15,8 +15,13 @@ function toRouteErrorMessage(error: unknown) {
 }
 
 function isValidDate(value: string) {
-  return /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const [year, month, day] = value.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
+
+const allowedRooms = new Set(["Pine View Suite", "Garden Studio", "Family Residence"]);
 
 export async function POST(request: Request) {
   try {
@@ -40,7 +45,7 @@ export async function POST(request: Request) {
     const phone = payload.phone?.trim() ?? "";
     const notes = payload.notes?.trim() ?? "";
 
-    if (!roomName) {
+    if (!allowedRooms.has(roomName)) {
       return Response.json({ error: "Please choose a room." }, { status: 400 });
     }
     if (!isValidDate(checkIn) || !isValidDate(checkOut)) {
@@ -54,6 +59,9 @@ export async function POST(request: Request) {
     }
     if (!fullName) {
       return Response.json({ error: "Please enter your full name." }, { status: 400 });
+    }
+    if (fullName.length > 120 || email.length > 254 || phone.length > 40 || notes.length > 2000) {
+      return Response.json({ error: "Please shorten one or more form fields and try again." }, { status: 400 });
     }
     if (!/^\S+@\S+\.\S+$/.test(email)) {
       return Response.json({ error: "Please provide a valid email address." }, { status: 400 });

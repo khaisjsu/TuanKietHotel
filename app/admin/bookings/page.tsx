@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { desc } from "drizzle-orm";
-import { requireChatGPTUser } from "../../chatgpt-auth";
+import { chatGPTSignOutPath, requireChatGPTUser } from "../../chatgpt-auth";
 import { getDb } from "../../../db";
 import { bookings } from "../../../db/schema";
 
@@ -31,7 +31,7 @@ export default async function AdminBookingsPage() {
           <p className="eyebrow">Family dashboard</p>
           <h1>Booking requests</h1>
         </div>
-        <p className="admin-signed-in">Signed in as {user.displayName}</p>
+        <p className="admin-signed-in">Signed in as {user.displayName} · <a href={chatGPTSignOutPath("/admin/bookings")}>Sign out</a></p>
       </header>
 
       {loadError ? (
